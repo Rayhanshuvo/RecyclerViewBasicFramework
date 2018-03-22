@@ -20,6 +20,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        AppDataBase database = AppDataBase.getAppDatabase(this);
+
+        DataGenerator.with(database).generateAddress();
+        database.addressDao().insert();
+        Address[] address=database.addressDao().loadAll();
+
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -28,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 0; i <= 10; i++) {
 
-            ListItem listItem = new ListItem("heding" + i + 1, "dummyText");
+            ListItem listItem = new ListItem("Rayhan"+address[i].getCity(),"Shuvo"+address[i].getStreet());
 
             listItems.add(listItem);
 
