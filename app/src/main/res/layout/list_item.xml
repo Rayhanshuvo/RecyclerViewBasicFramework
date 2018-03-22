@@ -15,18 +15,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-
+            android:showDividers="middle"
+            android:background="@color/colorAccent"
             android:padding="50dp"
             >
 
             <TextView
                 android:id="@+id/textViewHead"
+                android:background="@color/cardview_shadow_start_color"
+                android:padding="10dp"
+                android:layout_gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="This is just Heading" />
 
             <TextView
                 android:id="@+id/textViewFooter"
+                android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="This is Description" />
