@@ -8,10 +8,12 @@ public class ListItem {
 
     private String head;
     private String description;
+    private String test;
 
-    public ListItem(String head, String description) {
+    public ListItem(String head, String description,String test) {
         this.head = head;
         this.description = description;
+        this.test=test;
     }
 
     public String getHead() {
@@ -20,5 +22,9 @@ public class ListItem {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getTest() {
+        return test;
     }
 }

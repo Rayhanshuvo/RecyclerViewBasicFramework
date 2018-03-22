@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i = 0; i <address.length; i++) {
 
-            ListItem listItem = new ListItem("City"+address[i].getCity(),"Street"+address[i].getStreet());
+            ListItem listItem = new ListItem("City"+address[i].getCity(),"Street"+address[i].getStreet(),"Ok"+address[i].getPostCode());
            // ListItem listItem = new ListItem("City","Street");
 
             listItems.add(listItem);
