@@ -24,17 +24,20 @@
                 android:id="@+id/textViewHead"
                 android:background="@color/cardview_shadow_start_color"
                 android:padding="10dp"
+                android:textSize="25dp"
+                android:textColor="@color/colorPrimary"
                 android:layout_gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="This is just Heading" />
+                android:text="" />
 
             <TextView
                 android:id="@+id/textViewFooter"
                 android:padding="10dp"
+                android:textSize="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="This is Description" />
+                android:text="" />
 
         </LinearLayout>
 

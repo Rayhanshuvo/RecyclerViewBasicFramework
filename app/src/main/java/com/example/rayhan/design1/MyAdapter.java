@@ -57,7 +57,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
            public TextView textViewHead;
            public TextView textViewDesc;
            public LinearLayout linearLayout;
-        public ViewHolder(View itemView) {
+          public ViewHolder(View itemView) {
             super(itemView);
 
             textViewHead=(TextView)itemView.findViewById(R.id.textViewHead);

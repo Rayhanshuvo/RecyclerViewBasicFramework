@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,9 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
         listItems = new ArrayList<>();
 
-        for (int i = 0; i <= 10; i++) {
+        for (int i = 0; i <address.length; i++) {
 
-            ListItem listItem = new ListItem("Rayhan"+address[i].getCity(),"Shuvo"+address[i].getStreet());
+            ListItem listItem = new ListItem("City"+address[i].getCity(),"Street"+address[i].getStreet());
+           // ListItem listItem = new ListItem("City","Street");
 
             listItems.add(listItem);
 
