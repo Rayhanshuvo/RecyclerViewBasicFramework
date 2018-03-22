@@ -5,7 +5,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -32,9 +34,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        ListItem listItem=listItems.get(position);
+        final ListItem listItem=listItems.get(position);
         holder.textViewHead.setText(listItem.getHead());
         holder.textViewDesc.setText(listItem.getDescription());
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context,"You clicked"+listItem.getHead(),Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
@@ -47,11 +55,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
            public TextView textViewHead;
            public TextView textViewDesc;
+           public LinearLayout linearLayout;
         public ViewHolder(View itemView) {
             super(itemView);
 
             textViewHead=(TextView)itemView.findViewById(R.id.textViewHead);
             textViewDesc=(TextView)itemView.findViewById(R.id.textViewFooter);
+            linearLayout=(LinearLayout) itemView.findViewById(R.id.linearLayout);
 
         }
     }
