@@ -41,10 +41,10 @@ public class DataGenerator {
             return;
 
         Address[] addresses = new Address[4];
-        addresses[0] = addressInstance("drf","x","fg",5);
-        addresses[1] = addressInstance("f","f","c",7);
-        addresses[2] = addressInstance("g","g","t",8);
-        addresses[3] = addressInstance("ok","ok","ok",7);
+        addresses[0] = addressInstance("Dhaka","Bangladesh","Paltan",5);
+        addresses[1] = addressInstance("India","West Bengle","kolkata",7);
+        addresses[2] = addressInstance("Dubai","ramjan","Katar",8);
+        addresses[3] = addressInstance("Noakhali","BARISAL","UK",7);
 
         dataBase.addressDao().insert(addresses);
     }
