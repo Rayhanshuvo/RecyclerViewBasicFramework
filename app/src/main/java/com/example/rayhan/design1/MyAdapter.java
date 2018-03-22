@@ -16,7 +16,7 @@ import java.util.List;
  */
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-
+//Just testing git
     private List<ListItem> listItems;
     private Context context;
 
